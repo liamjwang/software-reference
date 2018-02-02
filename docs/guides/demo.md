@@ -18,6 +18,10 @@ You will like those projects!
 ###### h6 Heading
 
 
+
+
+
+
 ## Horizontal Rules
 
 ___
@@ -236,10 +240,27 @@ This is HTML abbreviation example.
 
 It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 
+```eval_rst
+.. autoclass:: recommonmark.transform.AutoStructify
+    :show-inheritance:
+```
+
 *[HTML]: Hyper Text Markup Language
+
+```eval_rst
+.. warning:: Zach likes kotlin
+```
 
 ### [Custom containers](https://github.com/markdown-it/markdown-it-container)
 
 ::: warning
 *here be dragons*
 :::
+
+```eval_rst
+.. warning:: Its a note! in markdown!
+```
+
+```math
+E = m c^2
+```
