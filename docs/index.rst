@@ -11,7 +11,7 @@ Welcome to Software-Reference
    :caption: Guides:
    
    guides/intro
-   guides/tutorial
+   guides/demo
    
    :caption: Other things:
 
