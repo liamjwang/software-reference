@@ -1,0 +1,8 @@
+CommonMark==0.7.4
+docutils==0.14
+future==0.16.0
+recommonmark==0.4.0
+sphinx-autobuild
+sphinx<1.6
+sphinx-rtd-theme
+sphinxcontrib-websupport==1.0.1
