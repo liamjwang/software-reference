@@ -1,0 +1,650 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.6.0">
+    
+    
+      
+        <title>Tuning a Velocity PID</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.aa3de92b.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="amber">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#tuning-a-velocity-pid" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="1540 Software Reference" class="md-header-nav__button md-logo">
+          
+            <img src="../../assets/images/logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                1540 Software Reference
+              </span>
+              <span class="md-header-nav__topic">
+                PID Tuning
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Home" class="md-tabs__link md-tabs__link--active">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../about/" title="Markdown Demos" class="md-tabs__link">
+          Markdown Demos
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../assets/images/logo.svg" width="24" height="24">
+      
+    </span>
+    1540 Software Reference
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Markdown Demos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Markdown Demos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../about/" title="First Demo" class="md-nav__link">
+      First Demo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../more-testing/" title="Second Demo" class="md-nav__link">
+      Second Demo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        PID Tuning
+      </label>
+    
+    <a href="./" title="PID Tuning" class="md-nav__link md-nav__link--active">
+      PID Tuning
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-determine-maximum-velocity-experimentally" title="Step 1: Determine Maximum Velocity Experimentally" class="md-nav__link">
+    Step 1: Determine Maximum Velocity Experimentally
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-for-flywheel-control" title="Example for Flywheel Control" class="md-nav__link">
+    Example for Flywheel Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-for-drivetrain-control" title="Example for Drivetrain Control" class="md-nav__link">
+    Example for Drivetrain Control
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-determine-f-gain" title="Step 2: Determine F-gain" class="md-nav__link">
+    Step 2: Determine F-gain
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-tune-p-i-and-d" title="Step 3: Tune P, I, and D" class="md-nav__link">
+    Step 3: Tune P, I, and D
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tuning-tips-and-tricks" title="Tuning Tips and Tricks" class="md-nav__link">
+    Tuning Tips and Tricks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-problems" title="Common Problems" class="md-nav__link">
+    Common Problems
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-determine-maximum-velocity-experimentally" title="Step 1: Determine Maximum Velocity Experimentally" class="md-nav__link">
+    Step 1: Determine Maximum Velocity Experimentally
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-for-flywheel-control" title="Example for Flywheel Control" class="md-nav__link">
+    Example for Flywheel Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-for-drivetrain-control" title="Example for Drivetrain Control" class="md-nav__link">
+    Example for Drivetrain Control
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-determine-f-gain" title="Step 2: Determine F-gain" class="md-nav__link">
+    Step 2: Determine F-gain
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-tune-p-i-and-d" title="Step 3: Tune P, I, and D" class="md-nav__link">
+    Step 3: Tune P, I, and D
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tuning-tips-and-tricks" title="Tuning Tips and Tricks" class="md-nav__link">
+    Tuning Tips and Tricks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-problems" title="Common Problems" class="md-nav__link">
+    Common Problems
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="tuning-a-velocity-pid">Tuning a Velocity PID<a class="headerlink" href="#tuning-a-velocity-pid" title="Permanent link">&para;</a></h1>
+<p><em>Based on the CTRE Software Reference Manual</em></p>
+<p>This guide uses classes from Team 1540's reusable code library, <a href="https://github.com/flamingchickens1540/ROOSTER">ROOSTER</a>; consult its documentation for more info.</p>
+<h2 id="step-1-determine-maximum-velocity-experimentally">Step 1: Determine Maximum Velocity Experimentally<a class="headerlink" href="#step-1-determine-maximum-velocity-experimentally" title="Permanent link">&para;</a></h2>
+<p>Create simple test code to drive the mechanism at a specified throttle and report the velocity (as measured by the encoders native units per 100ms) back to the SmartDashboard/Shuffleboard. For drivetrain tuning, this should be accomplished through joystick control to avoid hitting things, but for mechanisms such as flywheels simply setting the throttle through a tunable value is sufficient.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Throughout the process of tuning the PID controller the motor should be under the same load as it will be used in competitions, i.e. don't try to tune velocity PIDs on a drive train while the robot is off of the ground.</p>
+</div>
+<h3 id="example-for-flywheel-control">Example for Flywheel Control<a class="headerlink" href="#example-for-flywheel-control" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FlywheelTestRobot</span> <span class="kd">extends</span> <span class="n">IterativeRobot</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="n">ChickenTalon</span> <span class="n">flywheelMaster</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ChickenTalon</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+  <span class="kd">private</span> <span class="n">ChickenTalon</span> <span class="n">flywheelSlave</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ChickenTalon</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+  <span class="nd">@Tunable</span><span class="o">(</span><span class="s">&quot;Throttle&quot;</span><span class="o">)</span>
+  <span class="kd">public</span> <span class="kt">double</span> <span class="n">throttle</span> <span class="o">=</span> <span class="mf">0.0</span><span class="o">;</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">robotInit</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">AdjustableManager</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+
+    <span class="n">flywheelMaster</span><span class="o">.</span><span class="na">configSelectedFeedbackSensor</span><span class="o">(</span><span class="n">FeedbackDevice</span><span class="o">.</span><span class="na">QuadEncoder</span><span class="o">);</span>
+    <span class="n">flywheelSlave</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">ControlMode</span><span class="o">.</span><span class="na">Follower</span><span class="o">,</span> <span class="n">flywheelMaster</span><span class="o">.</span><span class="na">getDeviceID</span><span class="o">());</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">robotPeriodic</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">Scheduler</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">run</span><span class="o">();</span> <span class="c1">// needed for the AdjustableManager to work</span>
+    <span class="n">SmartDashboard</span><span class="o">.</span><span class="na">putNumber</span><span class="o">(</span><span class="s">&quot;Velocity&quot;</span><span class="o">,</span> <span class="n">flywheelMaster</span><span class="o">.</span><span class="na">getSelectedSensorVelocity</span><span class="o">());</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">teleopPeriodic</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">flywheelMaster</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">ControlMode</span><span class="o">.</span><span class="na">PercentOutput</span><span class="o">,</span> <span class="n">throttle</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+<p>In this case, simply set the motor output to 100% and monitor the velocity reading. Once it stabilizes, record it; this will be used to calculate F-gain.</p>
+<h3 id="example-for-drivetrain-control">Example for Drivetrain Control<a class="headerlink" href="#example-for-drivetrain-control" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DriveTestRobot</span> <span class="kd">extends</span> <span class="n">IterativeRobot</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">LEFT_Y_AXIS</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">RIGHT_Y_AXIS</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+
+  <span class="kd">private</span> <span class="n">Joystick</span> <span class="n">joystick</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Joystick</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+  <span class="kd">private</span> <span class="n">ChickenTalon</span> <span class="n">lMaster</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ChickenTalon</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+  <span class="kd">private</span> <span class="n">ChickenTalon</span> <span class="n">lSlave1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ChickenTalon</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+  <span class="kd">private</span> <span class="n">ChickenTalon</span> <span class="n">lSlave2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ChickenTalon</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
+  <span class="kd">private</span> <span class="n">ChickenTalon</span> <span class="n">rMaster</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ChickenTalon</span><span class="o">(</span><span class="mi">4</span><span class="o">);</span>
+  <span class="kd">private</span> <span class="n">ChickenTalon</span> <span class="n">rSlave1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ChickenTalon</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>
+  <span class="kd">private</span> <span class="n">ChickenTalon</span> <span class="n">rSlave2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ChickenTalon</span><span class="o">(</span><span class="mi">6</span><span class="o">);</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">robotInit</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// setting brake mode, inversions, ramp rates, etc. ommitted for brevity</span>
+    <span class="n">lMaster</span><span class="o">.</span><span class="na">configSelectedFeedbackSensor</span><span class="o">(</span><span class="n">FeedbackDevice</span><span class="o">.</span><span class="na">QuadEncoder</span><span class="o">);</span>
+    <span class="n">lSlave1</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">ControlMode</span><span class="o">.</span><span class="na">Follower</span><span class="o">,</span> <span class="n">lMaster</span><span class="o">.</span><span class="na">getDeviceID</span><span class="o">());</span>
+    <span class="n">lSlave2</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">ControlMode</span><span class="o">.</span><span class="na">Follower</span><span class="o">,</span> <span class="n">lMaster</span><span class="o">.</span><span class="na">getDeviceID</span><span class="o">());</span>
+
+    <span class="n">rMaster</span><span class="o">.</span><span class="na">configSelectedFeedbackSensor</span><span class="o">(</span><span class="n">FeedbackDevice</span><span class="o">.</span><span class="na">QuadEncoder</span><span class="o">);</span>
+    <span class="n">rSlave1</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">ControlMode</span><span class="o">.</span><span class="na">Follower</span><span class="o">,</span> <span class="n">rMaster</span><span class="o">.</span><span class="na">getDeviceID</span><span class="o">());</span>
+    <span class="n">rSlave2</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">ControlMode</span><span class="o">.</span><span class="na">Follower</span><span class="o">,</span> <span class="n">rMaster</span><span class="o">.</span><span class="na">getDeviceID</span><span class="o">());</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">robotPeriodic</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">SmartDashboard</span><span class="o">.</span><span class="na">putNumber</span><span class="o">(</span><span class="s">&quot;Left Velocity&quot;</span><span class="o">,</span> <span class="n">lMaster</span><span class="o">.</span><span class="na">getSelectedSensorVelocity</span><span class="o">());</span>
+    <span class="n">SmartDashboard</span><span class="o">.</span><span class="na">putNumber</span><span class="o">(</span><span class="s">&quot;Right Velocity&quot;</span><span class="o">,</span> <span class="n">rMaster</span><span class="o">.</span><span class="na">getSelectedSensorVelocity</span><span class="o">());</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">teleopPeriodic</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">lMaster</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">ControlMode</span><span class="o">.</span><span class="na">PercentOutput</span><span class="o">,</span> <span class="n">joystick</span><span class="o">.</span><span class="na">getRawAxis</span><span class="o">(</span><span class="n">LEFT_Y_AXIS</span><span class="o">));</span>
+    <span class="n">rMaster</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">ControlMode</span><span class="o">.</span><span class="na">PercentOutput</span><span class="o">,</span> <span class="n">joystick</span><span class="o">.</span><span class="na">getRawAxis</span><span class="o">(</span><span class="n">RIGHT_Y_AXS</span><span class="o">));</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+<p>In this case, simply drive the robot up to full speed using joysticks (try not to hit anything) and check the maximum speed attained. (Graphs are highly useful for this.)</p>
+<h2 id="step-2-determine-f-gain">Step 2: Determine F-gain<a class="headerlink" href="#step-2-determine-f-gain" title="Permanent link">&para;</a></h2>
+<p>Once the maximum output of the mechanism is established, use it to calculate your F-gain. The F-gain determines the base motor output when a specific velocity is commanded and does not use feedback from encoders. Since Talon SRXs represent throttle as a 10-bit signed integer from -1023 to 1023, an F-gain of (1023 / 500) or 2.046 would cause the Talon to output 100% when a speed of 500 is commanded. In that sense, divide 1023 by your measured maximum speed to get your F-gain.</p>
+<h2 id="step-3-tune-p-i-and-d">Step 3: Tune P, I, and D<a class="headerlink" href="#step-3-tune-p-i-and-d" title="Permanent link">&para;</a></h2>
+<p>Write a test robot which constantly applies tunable P, I, and D coefficients, as well as commanding the motor to go to a specific velocity. For flywheels, this can be set directly through the SmartDashboard; for drivetrains, this can be set by multiplying joystick values by your predetermined maximum velocity.</p>
+<p>Tune your PID coefficients according to the Talon SRX Software Reference Manual. Start with a P-gain of about 0.1 and the I and D values set to zero.</p>
+<blockquote>
+<p>Double the P-gain until the system oscillates (too much) or until the system responds adequately.</p>
+<p>If the mechanism is moving to swiftly, you can add D-gain to smooth the motion. Start with 10x the P-gain.</p>
+<p>If the mechanism is not quite reaching the final target position (and P-gain cannot be increased further without hurting overall performance) begin adding I-gain. Start with 1/100<sup>th</sup> of the P-gain.</p>
+</blockquote>
+<p>When adjusting the I-gain, it is important to also adjust the iZone coefficient which represents the size in milliseconds of the rolling window used to calculate the integral value. Try starting with a iZone value of 1000 (1 second). When increasing the iZone coefficient, the I coefficient should be decreased.</p>
+<h3 id="tuning-tips-and-tricks">Tuning Tips and Tricks<a class="headerlink" href="#tuning-tips-and-tricks" title="Permanent link">&para;</a></h3>
+<p>If (as in the case of a flywheel) you only care about keeping the mechanism at a certain speed when it is moving, and don't care about how fast it can stop, either prevent the motor from running in reverse (using the <code>configPeakOutputForward()</code> or <code>configPeakOutputReverse()</code> methods of <code>ChickenTalon</code>) or add code to disable PID control when stopping.</p>
+<p>If you find the mechanism consuming too much power or having trouble getting up to speed due to brownouts, add a small amount of closed-loop ramping using the <code>configClosedLoopRamp()</code> method. A good value for drivetrains is between 0.1 and 0.3 seconds. (Ramping is measured in seconds for the motor to ramp up from 0% to 100%.)</p>
+<p>Use the RoboRIO web dashboard to confirm that the PIDF coefficients are being set and that the CANTalon is receiving feedback from the correct encoder. </p>
+<div class="admonition bug">
+<p class="admonition-title">Bug</p>
+<p>Ramp rates are <strong>not</strong> displayed on the web dashboard; there is a field called "ramp rate", but setting it has no effect and it will always read 0. (See the CTRE Software Reference Manual, section 6.3.)</p>
+</div>
+<h3 id="common-problems">Common Problems<a class="headerlink" href="#common-problems" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mechanism is oscillating.</td>
+<td>Increase the D coefficient. If this worsens the oscillation, reduce the P, I, or D coefficients one at a time to isolate the cause of the oscillation.</td>
+</tr>
+<tr>
+<td>Mechanism is too slow to respond to a command.</td>
+<td>Lower the amount of closed loop ramping using the <code>configClosedLoopRamp()</code> method. If that fails (ramping is already at 0), increase the P coefficient.</td>
+</tr>
+<tr>
+<td>Mechanism velocity stabilizes at a value far from the goal.</td>
+<td>Adjust the F coefficient (with the other coefficients set to zero) until the actual speed is as close as possible to the goal.</td>
+</tr>
+<tr>
+<td>When P, I, or D is nonzero, the mechanism quickly accelerates to maximum output regardless of commanded velocity.</td>
+<td>Flip the sensor phase using <code>setSensorPhase()</code>.</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../more-testing/" title="Second Demo" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Second Demo
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.9fb73e57.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
