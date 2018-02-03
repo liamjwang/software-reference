@@ -1,25 +1,41 @@
+#Cool
+
+!!! danger
+	zach will try to convert you to kotlin
+
+!!! note
+	resistance is futile
+
+!!! warning
+	https://squidfunk.github.io/mkdocs-material/extensions/admonition/ for more info
+
+``` python
+import tensorflow as tf
+```
+$$
+a^2+b^2=c^2
+$$
+
+| Test table |      |       |
+| ---------- | ---- | ----- |
+| with       | some | stuff |
+|            |      |       |
+|            |      |       |
+
+++ctrl+alt+delete++
+
+
+
+asdfsadf
+
 ---
-__Advertisement :)__
 
-- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
-  resize in browser.
-- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
-  i18n with plurals support and easy syntax.
-
-You will like those projects!
-
----
-
-# h1 Heading 8-)
+# h1 Heading
 ## h2 Heading
 ### h3 Heading
 #### h4 Heading
 ##### h5 Heading
 ###### h6 Heading
-
-
-
-
 
 
 ## Horizontal Rules
@@ -240,58 +256,10 @@ This is HTML abbreviation example.
 
 It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 
-```eval_rst
-.. autoclass:: recommonmark.transform.AutoStructify
-    :show-inheritance:
-```
-
 *[HTML]: Hyper Text Markup Language
-
-```eval_rst
-.. warning:: Zach likes kotlin
-```
-
-``` sidebar:: Line numbers and highlights
-
-     emphasis-lines:
-       highlights the lines.
-     linenos:
-       shows the line numbers as well.
-     caption:
-       shown at the top of the code block.
-     name:
-       may be referenced with `:ref:` later.
-```
-
-``` code-block:: markdown
-     :linenos:
-     :emphasize-lines: 3,5
-     :caption: An example code-block with everything turned on.
-     :name: Full code-block example
-
-     # Comment line
-     import System
-     System.run_emphasis_line
-     # Long lines in code blocks create a auto horizontal scrollbar
-     System.exit!
-```
 
 ### [Custom containers](https://github.com/markdown-it/markdown-it-container)
 
 ::: warning
 *here be dragons*
 :::
-``` important:: Its a note! in markdown!
-```
-``` important:: Its a note! in markdown!
-```
-``` important:: Its a note! in markdown!
-```
-
-```eval_rst
-.. warning:: Its a note! in markdown!
-```
-
-```math
-E = m c^2
-```

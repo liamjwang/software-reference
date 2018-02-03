@@ -1,0 +1,52 @@
+site_name: 1540 Software Reference
+theme: 
+    name: material
+    palette:
+        primary: 'blue'
+        accent: 'amber'
+    feature:
+        tabs: true
+    logo: 'assets/images/logo.svg'
+    favicon: 'assets/images/favicon.ico'
+    language: 'en'
+    font:
+        text: 'Roboto'
+        code: 'Roboto Mono'
+
+pages:
+    - Home: index.md
+    - Markdown Demos: 
+        - First Demo: markdown/about.md
+        - Second Demo: markdown/more-testing.md
+    - PID Tuning: markdown/fancy-v-pid.md
+
+extra_css: [css/redthedocs.css]
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+
+  
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
