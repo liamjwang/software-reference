@@ -20,7 +20,7 @@ pages:
         - Second Demo: markdown/more-testing.md
     - PID Tuning: markdown/fancy-v-pid.md
 
-extra_css: [css/redthedocs.css]
+extra_css: []
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
 
