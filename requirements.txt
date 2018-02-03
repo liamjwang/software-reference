@@ -3,3 +3,5 @@ mkdocs>=0.17.1
 Pygments>=2.2
 
 pymdown-extensions>=3.4
+
+mkdocs-material
