@@ -10,7 +10,13 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="1540 Software Reference">
       
+      
+        <link rel="canonical" href="https://wangl5.github.io/software-reference/markdown/fancy-v-pid/">
+      
+      
+        <meta name="author" content="Liam Wang">
       
       
         <meta name="lang:clipboard.copy" content="Copy to clipboard">
@@ -36,7 +42,7 @@
     
     
       
-        <title>Tuning a Velocity PID</title>
+        <title>PID Tuning - 1540 Software Reference</title>
       
     
     
@@ -67,6 +73,25 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -82,7 +107,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="1540 Software Reference" class="md-header-nav__button md-logo">
+        <a href="https://wangl5.github.io/software-reference/" title="1540 Software Reference" class="md-header-nav__button md-logo">
           
             <img src="../../assets/images/logo.svg" width="24" height="24">
           
@@ -135,6 +160,30 @@
           
         
       </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/wangl5/software-reference/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      wangl5/software-reference/
+    </div>
+  </a>
+
+          </div>
+        </div>
       
     </div>
   </nav>
@@ -196,6 +245,28 @@
     </span>
     1540 Software Reference
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/wangl5/software-reference/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      wangl5/software-reference/
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -340,15 +411,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#common-problems" title="Common Problems" class="md-nav__link">
     Common Problems
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -430,15 +501,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#common-problems" title="Common Problems" class="md-nav__link">
     Common Problems
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -463,11 +534,35 @@
 <h2 id="step-1-determine-maximum-velocity-experimentally">Step 1: Determine Maximum Velocity Experimentally<a class="headerlink" href="#step-1-determine-maximum-velocity-experimentally" title="Permanent link">&para;</a></h2>
 <p>Create simple test code to drive the mechanism at a specified throttle and report the velocity (as measured by the encoders native units per 100ms) back to the SmartDashboard/Shuffleboard. For drivetrain tuning, this should be accomplished through joystick control to avoid hitting things, but for mechanisms such as flywheels simply setting the throttle through a tunable value is sufficient.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">Use Working Load When Tuning</p>
 <p>Throughout the process of tuning the PID controller the motor should be under the same load as it will be used in competitions, i.e. don't try to tune velocity PIDs on a drive train while the robot is off of the ground.</p>
 </div>
 <h3 id="example-for-flywheel-control">Example for Flywheel Control<a class="headerlink" href="#example-for-flywheel-control" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FlywheelTestRobot</span> <span class="kd">extends</span> <span class="n">IterativeRobot</span> <span class="o">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FlywheelTestRobot</span> <span class="kd">extends</span> <span class="n">IterativeRobot</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="n">ChickenTalon</span> <span class="n">flywheelMaster</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ChickenTalon</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
   <span class="kd">private</span> <span class="n">ChickenTalon</span> <span class="n">flywheelSlave</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ChickenTalon</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
   <span class="nd">@Tunable</span><span class="o">(</span><span class="s">&quot;Throttle&quot;</span><span class="o">)</span>
@@ -493,10 +588,46 @@
   <span class="o">}</span>
 <span class="o">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>In this case, simply set the motor output to 100% and monitor the velocity reading. Once it stabilizes, record it; this will be used to calculate F-gain.</p>
 <h3 id="example-for-drivetrain-control">Example for Drivetrain Control<a class="headerlink" href="#example-for-drivetrain-control" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DriveTestRobot</span> <span class="kd">extends</span> <span class="n">IterativeRobot</span> <span class="o">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DriveTestRobot</span> <span class="kd">extends</span> <span class="n">IterativeRobot</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">LEFT_Y_AXIS</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">RIGHT_Y_AXIS</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
 
@@ -522,17 +653,18 @@
 
   <span class="nd">@Override</span>
   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">robotPeriodic</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">SmartDashboard</span><span class="o">.</span><span class="na">putNumber</span><span class="o">(</span><span class="s">&quot;Left Velocity&quot;</span><span class="o">,</span> <span class="n">lMaster</span><span class="o">.</span><span class="na">getSelectedSensorVelocity</span><span class="o">());</span>
-    <span class="n">SmartDashboard</span><span class="o">.</span><span class="na">putNumber</span><span class="o">(</span><span class="s">&quot;Right Velocity&quot;</span><span class="o">,</span> <span class="n">rMaster</span><span class="o">.</span><span class="na">getSelectedSensorVelocity</span><span class="o">());</span>
-  <span class="o">}</span>
+<span class="hll">    <span class="n">SmartDashboard</span><span class="o">.</span><span class="na">putNumber</span><span class="o">(</span><span class="s">&quot;L Vel&quot;</span><span class="o">,</span> <span class="n">lMaster</span><span class="o">.</span><span class="na">getSelectedSensorVelocity</span><span class="o">());</span>
+</span><span class="hll">    <span class="n">SmartDashboard</span><span class="o">.</span><span class="na">putNumber</span><span class="o">(</span><span class="s">&quot;R Vel&quot;</span><span class="o">,</span> <span class="n">rMaster</span><span class="o">.</span><span class="na">getSelectedSensorVelocity</span><span class="o">());</span>
+</span>  <span class="o">}</span>
 
   <span class="nd">@Override</span>
   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">teleopPeriodic</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">lMaster</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">ControlMode</span><span class="o">.</span><span class="na">PercentOutput</span><span class="o">,</span> <span class="n">joystick</span><span class="o">.</span><span class="na">getRawAxis</span><span class="o">(</span><span class="n">LEFT_Y_AXIS</span><span class="o">));</span>
-    <span class="n">rMaster</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">ControlMode</span><span class="o">.</span><span class="na">PercentOutput</span><span class="o">,</span> <span class="n">joystick</span><span class="o">.</span><span class="na">getRawAxis</span><span class="o">(</span><span class="n">RIGHT_Y_AXS</span><span class="o">));</span>
-  <span class="o">}</span>
+<span class="hll">    <span class="n">lMaster</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">ControlMode</span><span class="o">.</span><span class="na">PercentOutput</span><span class="o">,</span> <span class="n">joystick</span><span class="o">.</span><span class="na">getRawAxis</span><span class="o">(</span><span class="n">LEFT_Y_AXIS</span><span class="o">));</span>
+</span><span class="hll">    <span class="n">rMaster</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">ControlMode</span><span class="o">.</span><span class="na">PercentOutput</span><span class="o">,</span> <span class="n">joystick</span><span class="o">.</span><span class="na">getRawAxis</span><span class="o">(</span><span class="n">RIGHT_Y_AXS</span><span class="o">));</span>
+</span>  <span class="o">}</span>
 <span class="o">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>In this case, simply drive the robot up to full speed using joysticks (try not to hit anything) and check the maximum speed attained. (Graphs are highly useful for this.)</p>
 <h2 id="step-2-determine-f-gain">Step 2: Determine F-gain<a class="headerlink" href="#step-2-determine-f-gain" title="Permanent link">&para;</a></h2>
@@ -551,10 +683,10 @@
 <p>If you find the mechanism consuming too much power or having trouble getting up to speed due to brownouts, add a small amount of closed-loop ramping using the <code>configClosedLoopRamp()</code> method. A good value for drivetrains is between 0.1 and 0.3 seconds. (Ramping is measured in seconds for the motor to ramp up from 0% to 100%.)</p>
 <p>Use the RoboRIO web dashboard to confirm that the PIDF coefficients are being set and that the CANTalon is receiving feedback from the correct encoder. </p>
 <div class="admonition bug">
-<p class="admonition-title">Bug</p>
+<p class="admonition-title">Not Our Fault</p>
 <p>Ramp rates are <strong>not</strong> displayed on the web dashboard; there is a field called "ramp rate", but setting it has no effect and it will always read 0. (See the CTRE Software Reference Manual, section 6.3.)</p>
 </div>
-<h3 id="common-problems">Common Problems<a class="headerlink" href="#common-problems" title="Permanent link">&para;</a></h3>
+<h2 id="common-problems">Common Problems<a class="headerlink" href="#common-problems" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -569,7 +701,7 @@
 </tr>
 <tr>
 <td>Mechanism is too slow to respond to a command.</td>
-<td>Lower the amount of closed loop ramping using the <code>configClosedLoopRamp()</code> method. If that fails (ramping is already at 0), increase the P coefficient.</td>
+<td>Lower the amount of closed loop ramping using the <code>configClosedLoopRamp()</code> method. If that fails (ramping is already at 0), increase the F​ coefficient.</td>
 </tr>
 <tr>
 <td>Mechanism velocity stabilizes at a value far from the goal.</td>
