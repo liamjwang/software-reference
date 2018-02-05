@@ -1,7 +1,3 @@
----
-title: Tuning a Velocity PID
----
-
 # Tuning a Velocity PID
 
 _Based on the CTRE Software Reference Manual_
@@ -12,7 +8,7 @@ This guide uses classes from Team 1540's reusable code library, [ROOSTER](https:
 
 Create simple test code to drive the mechanism at a specified throttle and report the velocity (as measured by the encoders native units per 100ms) back to the SmartDashboard/Shuffleboard. For drivetrain tuning, this should be accomplished through joystick control to avoid hitting things, but for mechanisms such as flywheels simply setting the throttle through a tunable value is sufficient.
 
-!!! note
+!!! note "Use Working Load When Tuning"
 	Throughout the process of tuning the PID controller the motor should be under the same load as it will be used in competitions, i.e. don't try to tune velocity PIDs on a drive train while the robot is off of the ground.
 
 ### Example for Flywheel Control
@@ -49,7 +45,7 @@ In this case, simply set the motor output to 100% and monitor the velocity readi
 
 ### Example for Drivetrain Control
 
-```java
+```java hl_lines="27 28 33 34"
 public class DriveTestRobot extends IterativeRobot {
   private static final int LEFT_Y_AXIS = 1;
   private static final int RIGHT_Y_AXIS = 5;
@@ -76,8 +72,8 @@ public class DriveTestRobot extends IterativeRobot {
 
   @Override
   public void robotPeriodic() {
-    SmartDashboard.putNumber("Left Velocity", lMaster.getSelectedSensorVelocity());
-    SmartDashboard.putNumber("Right Velocity", rMaster.getSelectedSensorVelocity());
+    SmartDashboard.putNumber("L Vel", lMaster.getSelectedSensorVelocity());
+    SmartDashboard.putNumber("R Vel", rMaster.getSelectedSensorVelocity());
   }
 
   @Override
@@ -116,14 +112,14 @@ If you find the mechanism consuming too much power or having trouble getting up 
 
 Use the RoboRIO web dashboard to confirm that the PIDF coefficients are being set and that the CANTalon is receiving feedback from the correct encoder. 
 
-!!! bug
+!!! bug "Not Our Fault"
 	Ramp rates are **not** displayed on the web dashboard; there is a field called "ramp rate", but setting it has no effect and it will always read 0. (See the CTRE Software Reference Manual, section 6.3.)
 
-### Common Problems
+## Common Problems
 
 | Problem                                  | Solution                                 |
 | ---------------------------------------- | ---------------------------------------- |
 | Mechanism is oscillating.                | Increase the D coefficient. If this worsens the oscillation, reduce the P, I, or D coefficients one at a time to isolate the cause of the oscillation. |
-| Mechanism is too slow to respond to a command. | Lower the amount of closed loop ramping using the `configClosedLoopRamp()` method. If that fails (ramping is already at 0), increase the P coefficient. |
+| Mechanism is too slow to respond to a command. | Lower the amount of closed loop ramping using the `configClosedLoopRamp()` method. If that fails (ramping is already at 0), increase the F​ coefficient. |
 | Mechanism velocity stabilizes at a value far from the goal. | Adjust the F coefficient (with the other coefficients set to zero) until the actual speed is as close as possible to the goal. |
 | When P, I, or D is nonzero, the mechanism quickly accelerates to maximum output regardless of commanded velocity. | Flip the sensor phase using `setSensorPhase()`. |

@@ -111,17 +111,17 @@ tincidunt. Aenean ullamcorper sit amet nulla at interdum.
       1. Vivamus venenatis porttitor tortor sit amet rutrum. Pellentesque aliquet
       quam enim, eu volutpat urna rutrum a. Nam vehicula nunc mauris, a
       ultricies libero efficitur sed.
-
+      
           1. Mauris dictum mi lacus
           2. Ut sit amet placerat ante
           3. Suspendisse ac eros arcu
-
+      
       2. Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet
       rutrum. Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Sed
       aliquet, neque at rutrum mollis, neque nisi tincidunt nibh.
-
+      
       3. Pellentesque eget `:::js var _extends` ornare tellus, ut gravida mi.
-    ``` js hl_lines="1"
+    ``` js hl_lines="4"
     var _extends = function(target) {
       for (var i = 1; i < arguments.length; i++) {
         var source = arguments[i];

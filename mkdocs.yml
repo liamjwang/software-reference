@@ -1,4 +1,13 @@
 site_name: 1540 Software Reference
+site_description: 1540 Software Reference
+site_author: Liam Wang
+site_url: https://wangl5.github.io/software-reference/
+
+# Repository
+repo_name: wangl5/software-reference/
+repo_url: https://github.com/wangl5/software-reference/
+edit_uri: ""
+
 theme: 
     name: material
     palette:
@@ -29,6 +38,7 @@ markdown_extensions:
   - markdown.extensions.admonition
   - markdown.extensions.codehilite:
       guess_lang: false
+      linenums: true
   - markdown.extensions.def_list
   - markdown.extensions.footnotes
   - markdown.extensions.meta

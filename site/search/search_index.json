@@ -1,0 +1,324 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to 1540's Software Reference\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#welcome-to-1540s-software-reference", 
+            "text": "For full documentation visit  mkdocs.org .", 
+            "title": "Welcome to 1540's Software Reference"
+        }, 
+        {
+            "location": "/#commands", 
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
+            "title": "Commands"
+        }, 
+        {
+            "location": "/#project-layout", 
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "Project layout"
+        }, 
+        {
+            "location": "/markdown/about/", 
+            "text": "Cool\n\n\n\n\nDanger\n\n\nzach will try to convert you to kotlin\n\n\n\n\n\n\nNote\n\n\nresistance is futile\n\n\n\n\n\n\nWarning\n\n\nhttps://squidfunk.github.io/mkdocs-material/extensions/admonition/\n for more info\n\n\n\n\nimport\n \ntensorflow\n \nas\n \ntf\n\n\n\n$$\na^2+b^2=c^2\n$$\n\n\n\n\n\n\n\n\nTest table\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nwith\n\n\nsome\n\n\nstuff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCtrl\n+\nAlt\n+\nDel\n\n\nasdfsadf\n\n\n\n\nh1 Heading\n\n\nh2 Heading\n\n\nh3 Heading\n\n\nh4 Heading\n\n\nh5 Heading\n\n\nh6 Heading\n\n\nHorizontal Rules\n\n\n\n\n\n\n\n\nTypographic replacements\n\n\nEnable typographer option to see result.\n\n\n (C) \n (R) \n (TM) (p) (P) +-\n\n\ntest.. test... test..... test?..... test!....\n\n\n!!!!!! ???? ,,  -- ---\n\n\n\"Smartypants, double quotes\" and 'single quotes'\n\n\nEmphasis\n\n\nThis is bold text\n\n\nThis is bold text\n\n\nThis is italic text\n\n\nThis is italic text\n\n\nStrikethrough\n\n\nBlockquotes\n\n\n\n\nBlockquotes can also be nested...\n\n\n\n\n...by using additional greater-than signs right next to each other...\n\n\n\n\n...or with spaces between arrows.\n\n\n\n\n\n\n\n\nLists\n\n\nUnordered\n\n\n\n\nCreate a list by starting a line with \n+\n, \n-\n, or \n*\n\n\nSub-lists are made by indenting 2 spaces:\n\n\nMarker character change forces new list start:\n\n\nAc tristique libero volutpat at\n\n\nFacilisis in pretium nisl aliquet\n\n\nNulla volutpat aliquam velit\n\n\n\n\n\n\nVery easy!\n\n\n\n\nOrdered\n\n\n\n\nLorem ipsum dolor sit amet\n\n\nConsectetur adipiscing elit\n\n\n\n\nInteger molestie lorem at massa\n\n\n\n\n\n\nYou can use sequential numbers...\n\n\n\n\n...or keep all the numbers as \n1.\n\n\n\n\nStart numbering with offset:\n\n\n\n\nfoo\n\n\nbar\n\n\n\n\nCode\n\n\nInline \ncode\n\n\nIndented code\n\n\n// Some comments\nline 1 of code\nline 2 of code\nline 3 of code\n\n\n\n\n\nBlock code \"fences\"\n\n\nSample text here...\n\n\n\n\nSyntax highlighting\n\n\nvar\n \nfoo\n \n=\n \nfunction\n \n(\nbar\n)\n \n{\n\n  \nreturn\n \nbar\n++\n;\n\n\n};\n\n\n\nconsole\n.\nlog\n(\nfoo\n(\n5\n));\n\n\n\n\n\nTables\n\n\n\n\n\n\n\n\nOption\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\ndata\n\n\npath to data files to supply the data that will be passed into templates.\n\n\n\n\n\n\nengine\n\n\nengine to be used for processing templates. Handlebars is the default.\n\n\n\n\n\n\next\n\n\nextension to be used for dest files.\n\n\n\n\n\n\n\n\nRight aligned columns\n\n\n\n\n\n\n\n\nOption\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\ndata\n\n\npath to data files to supply the data that will be passed into templates.\n\n\n\n\n\n\nengine\n\n\nengine to be used for processing templates. Handlebars is the default.\n\n\n\n\n\n\next\n\n\nextension to be used for dest files.\n\n\n\n\n\n\n\n\nLinks\n\n\nlink text\n\n\nlink with title\n\n\nAutoconverted link \nhttps://github.com/nodeca/pica\n (enable linkify to see)\n\n\nImages\n\n\n\n\n\n\nLike links, Images also have a footnote style syntax\n\n\n\n\nWith a reference later in the document defining the URL location:\n\n\nPlugins\n\n\nThe killer feature of \nmarkdown-it\n is very effective support of\n\nsyntax plugins\n.\n\n\nEmojies\n\n\n\n\nClassic markup: :wink: :crush: :cry: :tear: :laughing: :yum:\n\n\nShortcuts (emoticons): :-) :-( 8-) ;)\n\n\n\n\nsee \nhow to change output\n with twemoji.\n\n\nSubscript\n / \nSuperscript\n\n\n\n\n19^th^\n\n\nH\n2\nO\n\n\n\n\n\\\n\n\n++Inserted text++\n\n\n\\\n\n\nMarked text\n\n\nFootnotes\n\n\nFootnote 1 link\n1\n.\n\n\nFootnote 2 link\n2\n.\n\n\nInline footnote^[Text of inline footnote] definition.\n\n\nDuplicated footnote reference\n2\n.\n\n\nDefinition lists\n\n\n\n\nTerm 1\n\n\n\n\nDefinition 1\nwith lazy continuation.\n\n\n\n\nTerm 2 with \ninline markup\n\n\n\n\nDefinition 2\n\n\n{ some code, part of Definition 2 }\n\n\n\n\n\nThird paragraph of definition 2.\n\n\n\n\n\n\nCompact style:\n\n\nTerm 1\n  ~ Definition 1\n\n\nTerm 2\n  ~ Definition 2a\n  ~ Definition 2b\n\n\nAbbreviations\n\n\nThis is HTML abbreviation example.\n\n\nIt converts \"HTML\", but keep intact partial entries like \"xxxHTMLyyy\" and so on.\n\n\n*[HTML]: Hyper Text Markup Language\n\n\nCustom containers\n\n\n::: warning\n\nhere be dragons\n\n:::\n\n\n\n\n\n\n\n\n\n\nFootnote \ncan have markup\n\n\nand multiple paragraphs.\n\n\n\n\n\n\nFootnote text.", 
+            "title": "First Demo"
+        }, 
+        {
+            "location": "/markdown/about/#cool", 
+            "text": "Danger  zach will try to convert you to kotlin    Note  resistance is futile    Warning  https://squidfunk.github.io/mkdocs-material/extensions/admonition/  for more info   import   tensorflow   as   tf  \n$$\na^2+b^2=c^2\n$$     Test table        with  some  stuff               Ctrl + Alt + Del  asdfsadf", 
+            "title": "Cool"
+        }, 
+        {
+            "location": "/markdown/about/#h1-heading", 
+            "text": "", 
+            "title": "h1 Heading"
+        }, 
+        {
+            "location": "/markdown/about/#h2-heading", 
+            "text": "", 
+            "title": "h2 Heading"
+        }, 
+        {
+            "location": "/markdown/about/#h3-heading", 
+            "text": "", 
+            "title": "h3 Heading"
+        }, 
+        {
+            "location": "/markdown/about/#h4-heading", 
+            "text": "", 
+            "title": "h4 Heading"
+        }, 
+        {
+            "location": "/markdown/about/#h5-heading", 
+            "text": "", 
+            "title": "h5 Heading"
+        }, 
+        {
+            "location": "/markdown/about/#h6-heading", 
+            "text": "", 
+            "title": "h6 Heading"
+        }, 
+        {
+            "location": "/markdown/about/#horizontal-rules", 
+            "text": "", 
+            "title": "Horizontal Rules"
+        }, 
+        {
+            "location": "/markdown/about/#typographic-replacements", 
+            "text": "Enable typographer option to see result.   (C)   (R)   (TM) (p) (P) +-  test.. test... test..... test?..... test!....  !!!!!! ???? ,,  -- ---  \"Smartypants, double quotes\" and 'single quotes'", 
+            "title": "Typographic replacements"
+        }, 
+        {
+            "location": "/markdown/about/#emphasis", 
+            "text": "This is bold text  This is bold text  This is italic text  This is italic text  Strikethrough", 
+            "title": "Emphasis"
+        }, 
+        {
+            "location": "/markdown/about/#blockquotes", 
+            "text": "Blockquotes can also be nested...   ...by using additional greater-than signs right next to each other...   ...or with spaces between arrows.", 
+            "title": "Blockquotes"
+        }, 
+        {
+            "location": "/markdown/about/#lists", 
+            "text": "Unordered   Create a list by starting a line with  + ,  - , or  *  Sub-lists are made by indenting 2 spaces:  Marker character change forces new list start:  Ac tristique libero volutpat at  Facilisis in pretium nisl aliquet  Nulla volutpat aliquam velit    Very easy!   Ordered   Lorem ipsum dolor sit amet  Consectetur adipiscing elit   Integer molestie lorem at massa    You can use sequential numbers...   ...or keep all the numbers as  1.   Start numbering with offset:   foo  bar", 
+            "title": "Lists"
+        }, 
+        {
+            "location": "/markdown/about/#code", 
+            "text": "Inline  code  Indented code  // Some comments\nline 1 of code\nline 2 of code\nline 3 of code  Block code \"fences\"  Sample text here...  Syntax highlighting  var   foo   =   function   ( bar )   { \n   return   bar ++ ;  };  console . log ( foo ( 5 ));", 
+            "title": "Code"
+        }, 
+        {
+            "location": "/markdown/about/#tables", 
+            "text": "Option  Description      data  path to data files to supply the data that will be passed into templates.    engine  engine to be used for processing templates. Handlebars is the default.    ext  extension to be used for dest files.     Right aligned columns     Option  Description      data  path to data files to supply the data that will be passed into templates.    engine  engine to be used for processing templates. Handlebars is the default.    ext  extension to be used for dest files.", 
+            "title": "Tables"
+        }, 
+        {
+            "location": "/markdown/about/#links", 
+            "text": "link text  link with title  Autoconverted link  https://github.com/nodeca/pica  (enable linkify to see)", 
+            "title": "Links"
+        }, 
+        {
+            "location": "/markdown/about/#images", 
+            "text": "Like links, Images also have a footnote style syntax   With a reference later in the document defining the URL location:", 
+            "title": "Images"
+        }, 
+        {
+            "location": "/markdown/about/#plugins", 
+            "text": "The killer feature of  markdown-it  is very effective support of syntax plugins .", 
+            "title": "Plugins"
+        }, 
+        {
+            "location": "/markdown/about/#emojies", 
+            "text": "Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:  Shortcuts (emoticons): :-) :-( 8-) ;)   see  how to change output  with twemoji.", 
+            "title": "Emojies"
+        }, 
+        {
+            "location": "/markdown/about/#subscript-superscript", 
+            "text": "19^th^  H 2 O", 
+            "title": "Subscript / Superscript"
+        }, 
+        {
+            "location": "/markdown/about/#_1", 
+            "text": "++Inserted text++", 
+            "title": "\\"
+        }, 
+        {
+            "location": "/markdown/about/#_2", 
+            "text": "Marked text", 
+            "title": "\\"
+        }, 
+        {
+            "location": "/markdown/about/#footnotes", 
+            "text": "Footnote 1 link 1 .  Footnote 2 link 2 .  Inline footnote^[Text of inline footnote] definition.  Duplicated footnote reference 2 .", 
+            "title": "Footnotes"
+        }, 
+        {
+            "location": "/markdown/about/#definition-lists", 
+            "text": "Term 1   Definition 1\nwith lazy continuation.   Term 2 with  inline markup   Definition 2  { some code, part of Definition 2 }  Third paragraph of definition 2.    Compact style:  Term 1\n  ~ Definition 1  Term 2\n  ~ Definition 2a\n  ~ Definition 2b", 
+            "title": "Definition lists"
+        }, 
+        {
+            "location": "/markdown/about/#abbreviations", 
+            "text": "This is HTML abbreviation example.  It converts \"HTML\", but keep intact partial entries like \"xxxHTMLyyy\" and so on.  *[HTML]: Hyper Text Markup Language", 
+            "title": "Abbreviations"
+        }, 
+        {
+            "location": "/markdown/about/#custom-containers", 
+            "text": "::: warning here be dragons \n:::      Footnote  can have markup  and multiple paragraphs.    Footnote text.", 
+            "title": "Custom containers"
+        }, 
+        {
+            "location": "/markdown/more-testing/", 
+            "text": "Specimen\n\n\nBody copy\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Cras arcu libero,\nmollis sed massa vel, \nornare viverra ex\n. Mauris a ullamcorper lacus. Nullam\nurna elit, malesuada eget finibus ut, ullamcorper ac tortor. Vestibulum sodales\npulvinar nisl, pharetra aliquet est. Quisque volutpat erat ac nisi accumsan\ntempor.\n\n\nSed suscipit\n, orci non pretium pretium, quam mi gravida metus, vel\nvenenatis justo est condimentum diam. Maecenas non ornare justo. Nam a ipsum\neros. \nNulla aliquam\n orci sit amet nisl posuere malesuada. Proin aliquet\nnulla velit, quis ultricies orci feugiat et. \nUt tincidunt sollicitudin\n\ntincidunt. Aenean ullamcorper sit amet nulla at interdum.\n\n\nHeadings\n\n\nThe 3\nrd\n level\n\n\nThe 4\nth\n level\n\n\nThe 5\nth\n level\n\n\nThe 6\nth\n level\n\n\nHeadings \nwith secondary text\n\n\nThe 3\nrd\n level \nwith secondary text\n\n\nThe 4\nth\n level \nwith secondary text\n\n\nThe 5\nth\n level \nwith secondary text\n\n\nThe 6\nth\n level \nwith secondary text\n\n\nBlockquotes\n\n\n\n\nMorbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet rutrum.\n  Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Nam vehicula nunc\n  mauris, a ultricies libero efficitur sed. \nClass aptent\n taciti sociosqu ad\n  litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie\n  imperdiet consectetur.\n\n\n\n\nBlockquote nesting\n\n\n\n\nSed aliquet\n, neque at rutrum mollis, neque nisi tincidunt nibh, vitae\n  faucibus lacus nunc at lacus. Nunc scelerisque, quam id cursus sodales, lorem\n  \nlibero fermentum\n urna, ut efficitur elit ligula et nunc.\n\n\n\n\nMauris dictum mi lacus, sit amet pellentesque urna vehicula fringilla.\n    Ut sit amet placerat ante. Proin sed elementum nulla. Nunc vitae sem odio.\n    Suspendisse ac eros arcu. Vivamus orci erat, volutpat a tempor et, rutrum.\n    eu odio.\n\n\n\n\nSuspendisse rutrum facilisis risus\n, eu posuere neque commodo a.\n      Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed nec leo\n      bibendum, sodales mauris ut, tincidunt massa.\n\n\n\n\n\n\n\n\nOther content blocks\n\n\n\n\nVestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu\n  lectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,\n  sit amet laoreet nibh.\n  \nvar\n \n_extends\n \n=\n \nfunction\n(\ntarget\n)\n \n{\n\n\n  \nfor\n \n(\nvar\n \ni\n \n=\n \n1\n;\n \ni\n \n \narguments\n.\nlength\n;\n \ni\n++\n)\n \n{\n\n\n    \nvar\n \nsource\n \n=\n \narguments\n[\ni\n];\n\n\n    \nfor\n \n(\nvar\n \nkey\n \nin\n \nsource\n)\n \n{\n\n\n      \ntarget\n[\nkey\n]\n \n=\n \nsource\n[\nkey\n];\n\n\n    \n}\n\n  \n}\n\n\n  \nreturn\n \ntarget\n;\n\n\n};\n\n\n\n\n\n\nPraesent at \nreturn\n \ntarget\n, sodales nibh vel, tempor felis. Fusce\n      vel lacinia lacus. Suspendisse rhoncus nunc non nisi iaculis ultrices.\n      Donec consectetur mauris non neque imperdiet, eget volutpat libero.\n\n\n\n\n\n\nLists\n\n\nUnordered lists\n\n\n\n\n\n\nSed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus\n  non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,\n  at elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.\n\n\n\n\nDuis mollis est eget nibh volutpat, fermentum aliquet dui mollis.\n\n\nNam vulputate tincidunt fringilla.\n\n\nNullam dignissim ultrices urna non auctor.\n\n\n\n\n\n\n\n\nAliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin ut\n  eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at aliquam\n  ac, aliquet sed mauris.\n\n\n\n\n\n\nNulla et rhoncus turpis. Mauris ultricies elementum leo. Duis efficitur\n  accumsan nibh eu mattis. Vivamus tempus velit eros, porttitor placerat nibh\n  lacinia sed. Aenean in finibus diam.\n\n\n\n\n\n\nOrdered lists\n\n\n\n\n\n\nInteger vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis\n  elementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla\n  consectetur feugiat sodales.\n\n\n\n\n\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur\n  ridiculus mus. Aliquam ornare feugiat quam et egestas. Nunc id erat et quam\n  pellentesque lacinia eu vel odio.\n\n\n\n\n\n\nVivamus venenatis porttitor tortor sit amet rutrum. Pellentesque aliquet\n  quam enim, eu volutpat urna rutrum a. Nam vehicula nunc mauris, a\n  ultricies libero efficitur sed.\n\n\n\n\nMauris dictum mi lacus\n\n\nUt sit amet placerat ante\n\n\nSuspendisse ac eros arcu\n\n\n\n\n\n\n\n\nMorbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet\n  rutrum. Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Sed\n  aliquet, neque at rutrum mollis, neque nisi tincidunt nibh.\n\n\n\n\n\n\nPellentesque eget \nvar\n \n_extends\n ornare tellus, ut gravida mi.\n\nvar\n \n_extends\n \n=\n \nfunction\n(\ntarget\n)\n \n{\n\n\n  \nfor\n \n(\nvar\n \ni\n \n=\n \n1\n;\n \ni\n \n \narguments\n.\nlength\n;\n \ni\n++\n)\n \n{\n\n    \nvar\n \nsource\n \n=\n \narguments\n[\ni\n];\n\n    \nfor\n \n(\nvar\n \nkey\n \nin\n \nsource\n)\n \n{\n\n      \ntarget\n[\nkey\n]\n \n=\n \nsource\n[\nkey\n];\n\n    \n}\n\n  \n}\n\n  \nreturn\n \ntarget\n;\n\n\n};\n\n\n\n\n\n\n\n\n\n\n\n\nVivamus id mi enim. Integer id turpis sapien. Ut condimentum lobortis\n  sagittis. Aliquam purus tellus, faucibus eget urna at, iaculis venenatis\n  nulla. Vivamus a pharetra leo.\n\n\n\n\n\n\nDefinition lists\n\n\n\n\nLorem ipsum dolor sit amet\n\n\n\n\nSed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus\ntellus non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor\nlobortis orci, at elementum urna sodales vitae. In in vehicula nulla.\n\n\nDuis mollis est eget nibh volutpat, fermentum aliquet dui mollis.\nNam vulputate tincidunt fringilla.\nNullam dignissim ultrices urna non auctor.\n\n\n\n\nCras arcu libero\n\n\n\n\nAliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin\nut eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at\naliquam ac, aliquet sed mauris.\n\n\n\n\n\n\nCode blocks\n\n\nInline\n\n\nMorbi eget \ndapibus felis\n. Vivamus \nvenenatis porttitor\n tortor sit amet\nrutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra,\nper inceptos himenaeos. \nPellentesque aliquet quam enim\n, eu volutpat urna\nrutrum a.\n\n\nNam vehicula nunc \nreturn\n \ntarget\n mauris, a ultricies libero efficitur\nsed. Sed molestie imperdiet consectetur. Vivamus a pharetra leo. Pellentesque\neget ornare tellus, ut gravida mi. Fusce vel lacinia lacus.\n\n\nListing\n\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\nvar\n \n_extends\n \n=\n \nfunction\n(\ntarget\n)\n \n{\n\n  \nfor\n \n(\nvar\n \ni\n \n=\n \n1\n;\n \ni\n \n \narguments\n.\nlength\n;\n \ni\n++\n)\n \n{\n\n    \nvar\n \nsource\n \n=\n \narguments\n[\ni\n];\n\n    \nfor\n \n(\nvar\n \nkey\n \nin\n \nsource\n)\n \n{\n\n      \ntarget\n[\nkey\n]\n \n=\n \nsource\n[\nkey\n];\n\n    \n}\n\n  \n}\n\n\n  \nreturn\n \ntarget\n;\n\n\n};\n\n\n\n\n\n\n\nHorizontal rules\n\n\nAenean in finibus diam. Duis mollis est eget nibh volutpat, fermentum aliquet\ndui mollis. Nam vulputate tincidunt fringilla. Nullam dignissim ultrices urna\nnon auctor.\n\n\n\n\nInteger vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis\nelementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla\nconsectetur feugiat sodales.\n\n\nData tables\n\n\n\n\n\n\n\n\nSollicitudo / Pellentesi\n\n\nconsectetur\n\n\nadipiscing\n\n\nelit\n\n\narcu\n\n\nsed\n\n\n\n\n\n\n\n\n\n\nVivamus a pharetra\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nOrnare viverra ex\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nMauris a ullamcorper\n\n\nyes\n\n\nyes\n\n\npartial\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nNullam urna elit\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nMalesuada eget finibus\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nUllamcorper\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nVestibulum sodales\n\n\nyes\n\n\n-\n\n\nyes\n\n\n-\n\n\nyes\n\n\n\n\n\n\nPulvinar nisl\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n-\n\n\n-\n\n\n\n\n\n\nPharetra aliquet est\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nSed suscipit\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nOrci non pretium\n\n\nyes\n\n\npartial\n\n\n-\n\n\n-\n\n\n-\n\n\n\n\n\n\n\n\nSed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus\nnon sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,\nat elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.\n\n\n\n\n\n\n\n\nLeft\n\n\nCenter\n\n\nRight\n\n\n\n\n\n\n\n\n\n\nLorem\n\n\ndolor\n\n\namet\n\n\n\n\n\n\nipsum\n\n\nsit\n\n\n\n\n\n\n\n\n\n\nVestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu\nlectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,\nsit amet laoreet nibh.\n\n\n\n  \n\n    \n\n    \n\n  \n\n  \n\n    \n\n      \nTable\n\n      \nwith colgroups (Pandoc)\n\n    \n\n  \n\n  \n\n    \n\n      \nLorem\n\n      \nipsum dolor sit amet.\n\n    \n\n    \n\n      \nSed sagittis\n\n      \neleifend rutrum. Donec vitae suscipit est.", 
+            "title": "Second Demo"
+        }, 
+        {
+            "location": "/markdown/more-testing/#specimen", 
+            "text": "", 
+            "title": "Specimen"
+        }, 
+        {
+            "location": "/markdown/more-testing/#body-copy", 
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras arcu libero,\nmollis sed massa vel,  ornare viverra ex . Mauris a ullamcorper lacus. Nullam\nurna elit, malesuada eget finibus ut, ullamcorper ac tortor. Vestibulum sodales\npulvinar nisl, pharetra aliquet est. Quisque volutpat erat ac nisi accumsan\ntempor.  Sed suscipit , orci non pretium pretium, quam mi gravida metus, vel\nvenenatis justo est condimentum diam. Maecenas non ornare justo. Nam a ipsum\neros.  Nulla aliquam  orci sit amet nisl posuere malesuada. Proin aliquet\nnulla velit, quis ultricies orci feugiat et.  Ut tincidunt sollicitudin \ntincidunt. Aenean ullamcorper sit amet nulla at interdum.", 
+            "title": "Body copy"
+        }, 
+        {
+            "location": "/markdown/more-testing/#headings", 
+            "text": "", 
+            "title": "Headings"
+        }, 
+        {
+            "location": "/markdown/more-testing/#the-3rd-level", 
+            "text": "", 
+            "title": "The 3rd level"
+        }, 
+        {
+            "location": "/markdown/more-testing/#the-4th-level", 
+            "text": "", 
+            "title": "The 4th level"
+        }, 
+        {
+            "location": "/markdown/more-testing/#the-5th-level", 
+            "text": "", 
+            "title": "The 5th level"
+        }, 
+        {
+            "location": "/markdown/more-testing/#the-6th-level", 
+            "text": "", 
+            "title": "The 6th level"
+        }, 
+        {
+            "location": "/markdown/more-testing/#headings-with-secondary-text", 
+            "text": "", 
+            "title": "Headings with secondary text"
+        }, 
+        {
+            "location": "/markdown/more-testing/#the-3rd-level-with-secondary-text", 
+            "text": "", 
+            "title": "The 3rd level with secondary text"
+        }, 
+        {
+            "location": "/markdown/more-testing/#the-4th-level-with-secondary-text", 
+            "text": "", 
+            "title": "The 4th level with secondary text"
+        }, 
+        {
+            "location": "/markdown/more-testing/#the-5th-level-with-secondary-text", 
+            "text": "", 
+            "title": "The 5th level with secondary text"
+        }, 
+        {
+            "location": "/markdown/more-testing/#the-6th-level-with-secondary-text", 
+            "text": "", 
+            "title": "The 6th level with secondary text"
+        }, 
+        {
+            "location": "/markdown/more-testing/#blockquotes", 
+            "text": "Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet rutrum.\n  Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Nam vehicula nunc\n  mauris, a ultricies libero efficitur sed.  Class aptent  taciti sociosqu ad\n  litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie\n  imperdiet consectetur.", 
+            "title": "Blockquotes"
+        }, 
+        {
+            "location": "/markdown/more-testing/#blockquote-nesting", 
+            "text": "Sed aliquet , neque at rutrum mollis, neque nisi tincidunt nibh, vitae\n  faucibus lacus nunc at lacus. Nunc scelerisque, quam id cursus sodales, lorem\n   libero fermentum  urna, ut efficitur elit ligula et nunc.   Mauris dictum mi lacus, sit amet pellentesque urna vehicula fringilla.\n    Ut sit amet placerat ante. Proin sed elementum nulla. Nunc vitae sem odio.\n    Suspendisse ac eros arcu. Vivamus orci erat, volutpat a tempor et, rutrum.\n    eu odio.   Suspendisse rutrum facilisis risus , eu posuere neque commodo a.\n      Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed nec leo\n      bibendum, sodales mauris ut, tincidunt massa.", 
+            "title": "Blockquote nesting"
+        }, 
+        {
+            "location": "/markdown/more-testing/#other-content-blocks", 
+            "text": "Vestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu\n  lectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,\n  sit amet laoreet nibh.\n   var   _extends   =   function ( target )   {     for   ( var   i   =   1 ;   i     arguments . length ;   i ++ )   {       var   source   =   arguments [ i ];       for   ( var   key   in   source )   {         target [ key ]   =   source [ key ];       } \n   }     return   target ;  };    Praesent at  return   target , sodales nibh vel, tempor felis. Fusce\n      vel lacinia lacus. Suspendisse rhoncus nunc non nisi iaculis ultrices.\n      Donec consectetur mauris non neque imperdiet, eget volutpat libero.", 
+            "title": "Other content blocks"
+        }, 
+        {
+            "location": "/markdown/more-testing/#lists", 
+            "text": "", 
+            "title": "Lists"
+        }, 
+        {
+            "location": "/markdown/more-testing/#unordered-lists", 
+            "text": "Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus\n  non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,\n  at elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.   Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.  Nam vulputate tincidunt fringilla.  Nullam dignissim ultrices urna non auctor.     Aliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin ut\n  eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at aliquam\n  ac, aliquet sed mauris.    Nulla et rhoncus turpis. Mauris ultricies elementum leo. Duis efficitur\n  accumsan nibh eu mattis. Vivamus tempus velit eros, porttitor placerat nibh\n  lacinia sed. Aenean in finibus diam.", 
+            "title": "Unordered lists"
+        }, 
+        {
+            "location": "/markdown/more-testing/#ordered-lists", 
+            "text": "Integer vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis\n  elementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla\n  consectetur feugiat sodales.    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur\n  ridiculus mus. Aliquam ornare feugiat quam et egestas. Nunc id erat et quam\n  pellentesque lacinia eu vel odio.    Vivamus venenatis porttitor tortor sit amet rutrum. Pellentesque aliquet\n  quam enim, eu volutpat urna rutrum a. Nam vehicula nunc mauris, a\n  ultricies libero efficitur sed.   Mauris dictum mi lacus  Ut sit amet placerat ante  Suspendisse ac eros arcu     Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet\n  rutrum. Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Sed\n  aliquet, neque at rutrum mollis, neque nisi tincidunt nibh.    Pellentesque eget  var   _extends  ornare tellus, ut gravida mi. var   _extends   =   function ( target )   {     for   ( var   i   =   1 ;   i     arguments . length ;   i ++ )   { \n     var   source   =   arguments [ i ]; \n     for   ( var   key   in   source )   { \n       target [ key ]   =   source [ key ]; \n     } \n   } \n   return   target ;  };       Vivamus id mi enim. Integer id turpis sapien. Ut condimentum lobortis\n  sagittis. Aliquam purus tellus, faucibus eget urna at, iaculis venenatis\n  nulla. Vivamus a pharetra leo.", 
+            "title": "Ordered lists"
+        }, 
+        {
+            "location": "/markdown/more-testing/#definition-lists", 
+            "text": "Lorem ipsum dolor sit amet   Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus\ntellus non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor\nlobortis orci, at elementum urna sodales vitae. In in vehicula nulla.  Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.\nNam vulputate tincidunt fringilla.\nNullam dignissim ultrices urna non auctor.   Cras arcu libero   Aliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin\nut eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at\naliquam ac, aliquet sed mauris.", 
+            "title": "Definition lists"
+        }, 
+        {
+            "location": "/markdown/more-testing/#code-blocks", 
+            "text": "", 
+            "title": "Code blocks"
+        }, 
+        {
+            "location": "/markdown/more-testing/#inline", 
+            "text": "Morbi eget  dapibus felis . Vivamus  venenatis porttitor  tortor sit amet\nrutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra,\nper inceptos himenaeos.  Pellentesque aliquet quam enim , eu volutpat urna\nrutrum a.  Nam vehicula nunc  return   target  mauris, a ultricies libero efficitur\nsed. Sed molestie imperdiet consectetur. Vivamus a pharetra leo. Pellentesque\neget ornare tellus, ut gravida mi. Fusce vel lacinia lacus.", 
+            "title": "Inline"
+        }, 
+        {
+            "location": "/markdown/more-testing/#listing", 
+            "text": "1\n2\n3\n4\n5\n6\n7\n8\n9 var   _extends   =   function ( target )   { \n   for   ( var   i   =   1 ;   i     arguments . length ;   i ++ )   { \n     var   source   =   arguments [ i ]; \n     for   ( var   key   in   source )   { \n       target [ key ]   =   source [ key ]; \n     } \n   }     return   target ;  };", 
+            "title": "Listing"
+        }, 
+        {
+            "location": "/markdown/more-testing/#horizontal-rules", 
+            "text": "Aenean in finibus diam. Duis mollis est eget nibh volutpat, fermentum aliquet\ndui mollis. Nam vulputate tincidunt fringilla. Nullam dignissim ultrices urna\nnon auctor.   Integer vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis\nelementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla\nconsectetur feugiat sodales.", 
+            "title": "Horizontal rules"
+        }, 
+        {
+            "location": "/markdown/more-testing/#data-tables", 
+            "text": "Sollicitudo / Pellentesi  consectetur  adipiscing  elit  arcu  sed      Vivamus a pharetra  yes  yes  yes  yes  yes    Ornare viverra ex  yes  yes  yes  yes  yes    Mauris a ullamcorper  yes  yes  partial  yes  yes    Nullam urna elit  yes  yes  yes  yes  yes    Malesuada eget finibus  yes  yes  yes  yes  yes    Ullamcorper  yes  yes  yes  yes  yes    Vestibulum sodales  yes  -  yes  -  yes    Pulvinar nisl  yes  yes  yes  -  -    Pharetra aliquet est  yes  yes  yes  yes  yes    Sed suscipit  yes  yes  yes  yes  yes    Orci non pretium  yes  partial  -  -  -     Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus\nnon sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,\nat elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.     Left  Center  Right      Lorem  dolor  amet    ipsum  sit      Vestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu\nlectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,\nsit amet laoreet nibh.  \n   \n     \n     \n   \n   \n     \n       Table \n       with colgroups (Pandoc) \n     \n   \n   \n     \n       Lorem \n       ipsum dolor sit amet. \n     \n     \n       Sed sagittis \n       eleifend rutrum. Donec vitae suscipit est.", 
+            "title": "Data tables"
+        }, 
+        {
+            "location": "/markdown/fancy-v-pid/", 
+            "text": "Tuning a Velocity PID\n\n\nBased on the CTRE Software Reference Manual\n\n\nThis guide uses classes from Team 1540's reusable code library, \nROOSTER\n; consult its documentation for more info.\n\n\nStep 1: Determine Maximum Velocity Experimentally\n\n\nCreate simple test code to drive the mechanism at a specified throttle and report the velocity (as measured by the encoders native units per 100ms) back to the SmartDashboard/Shuffleboard. For drivetrain tuning, this should be accomplished through joystick control to avoid hitting things, but for mechanisms such as flywheels simply setting the throttle through a tunable value is sufficient.\n\n\n\n\nNote\n\n\nThroughout the process of tuning the PID controller the motor should be under the same load as it will be used in competitions, i.e. don't try to tune velocity PIDs on a drive train while the robot is off of the ground.\n\n\n\n\nExample for Flywheel Control\n\n\npublic\n \nclass\n \nFlywheelTestRobot\n \nextends\n \nIterativeRobot\n \n{\n\n  \nprivate\n \nChickenTalon\n \nflywheelMaster\n \n=\n \nnew\n \nChickenTalon\n(\n0\n);\n\n  \nprivate\n \nChickenTalon\n \nflywheelSlave\n \n=\n \nnew\n \nChickenTalon\n(\n1\n);\n\n  \n@Tunable\n(\nThrottle\n)\n\n  \npublic\n \ndouble\n \nthrottle\n \n=\n \n0.0\n;\n\n\n  \n@Override\n\n  \npublic\n \nvoid\n \nrobotInit\n()\n \n{\n\n    \nAdjustableManager\n.\ngetInstance\n().\nadd\n(\nthis\n);\n\n\n    \nflywheelMaster\n.\nconfigSelectedFeedbackSensor\n(\nFeedbackDevice\n.\nQuadEncoder\n);\n\n    \nflywheelSlave\n.\nset\n(\nControlMode\n.\nFollower\n,\n \nflywheelMaster\n.\ngetDeviceID\n());\n\n  \n}\n\n\n  \n@Override\n\n  \npublic\n \nvoid\n \nrobotPeriodic\n()\n \n{\n\n    \nScheduler\n.\ngetInstance\n().\nrun\n();\n \n// needed for the AdjustableManager to work\n\n    \nSmartDashboard\n.\nputNumber\n(\nVelocity\n,\n \nflywheelMaster\n.\ngetSelectedSensorVelocity\n());\n\n  \n}\n\n\n  \n@Override\n\n  \npublic\n \nvoid\n \nteleopPeriodic\n()\n \n{\n\n    \nflywheelMaster\n.\nset\n(\nControlMode\n.\nPercentOutput\n,\n \nthrottle\n);\n\n  \n}\n\n\n}\n\n\n\n\n\nIn this case, simply set the motor output to 100% and monitor the velocity reading. Once it stabilizes, record it; this will be used to calculate F-gain.\n\n\nExample for Drivetrain Control\n\n\npublic\n \nclass\n \nDriveTestRobot\n \nextends\n \nIterativeRobot\n \n{\n\n  \nprivate\n \nstatic\n \nfinal\n \nint\n \nLEFT_Y_AXIS\n \n=\n \n1\n;\n\n  \nprivate\n \nstatic\n \nfinal\n \nint\n \nRIGHT_Y_AXIS\n \n=\n \n5\n;\n\n\n  \nprivate\n \nJoystick\n \njoystick\n \n=\n \nnew\n \nJoystick\n(\n0\n);\n\n  \nprivate\n \nChickenTalon\n \nlMaster\n \n=\n \nnew\n \nChickenTalon\n(\n1\n);\n\n  \nprivate\n \nChickenTalon\n \nlSlave1\n \n=\n \nnew\n \nChickenTalon\n(\n2\n);\n\n  \nprivate\n \nChickenTalon\n \nlSlave2\n \n=\n \nnew\n \nChickenTalon\n(\n3\n);\n\n  \nprivate\n \nChickenTalon\n \nrMaster\n \n=\n \nnew\n \nChickenTalon\n(\n4\n);\n\n  \nprivate\n \nChickenTalon\n \nrSlave1\n \n=\n \nnew\n \nChickenTalon\n(\n5\n);\n\n  \nprivate\n \nChickenTalon\n \nrSlave2\n \n=\n \nnew\n \nChickenTalon\n(\n6\n);\n\n\n  \n@Override\n\n  \npublic\n \nvoid\n \nrobotInit\n()\n \n{\n\n    \n// setting brake mode, inversions, ramp rates, etc. ommitted for brevity\n\n    \nlMaster\n.\nconfigSelectedFeedbackSensor\n(\nFeedbackDevice\n.\nQuadEncoder\n);\n\n    \nlSlave1\n.\nset\n(\nControlMode\n.\nFollower\n,\n \nlMaster\n.\ngetDeviceID\n());\n\n    \nlSlave2\n.\nset\n(\nControlMode\n.\nFollower\n,\n \nlMaster\n.\ngetDeviceID\n());\n\n\n    \nrMaster\n.\nconfigSelectedFeedbackSensor\n(\nFeedbackDevice\n.\nQuadEncoder\n);\n\n    \nrSlave1\n.\nset\n(\nControlMode\n.\nFollower\n,\n \nrMaster\n.\ngetDeviceID\n());\n\n    \nrSlave2\n.\nset\n(\nControlMode\n.\nFollower\n,\n \nrMaster\n.\ngetDeviceID\n());\n\n  \n}\n\n\n  \n@Override\n\n  \npublic\n \nvoid\n \nrobotPeriodic\n()\n \n{\n\n    \nSmartDashboard\n.\nputNumber\n(\nLeft Velocity\n,\n \nlMaster\n.\ngetSelectedSensorVelocity\n());\n\n    \nSmartDashboard\n.\nputNumber\n(\nRight Velocity\n,\n \nrMaster\n.\ngetSelectedSensorVelocity\n());\n\n  \n}\n\n\n  \n@Override\n\n  \npublic\n \nvoid\n \nteleopPeriodic\n()\n \n{\n\n    \nlMaster\n.\nset\n(\nControlMode\n.\nPercentOutput\n,\n \njoystick\n.\ngetRawAxis\n(\nLEFT_Y_AXIS\n));\n\n    \nrMaster\n.\nset\n(\nControlMode\n.\nPercentOutput\n,\n \njoystick\n.\ngetRawAxis\n(\nRIGHT_Y_AXS\n));\n\n  \n}\n\n\n}\n\n\n\n\n\nIn this case, simply drive the robot up to full speed using joysticks (try not to hit anything) and check the maximum speed attained. (Graphs are highly useful for this.)\n\n\nStep 2: Determine F-gain\n\n\nOnce the maximum output of the mechanism is established, use it to calculate your F-gain. The F-gain determines the base motor output when a specific velocity is commanded and does not use feedback from encoders. Since Talon SRXs represent throttle as a 10-bit signed integer from -1023 to 1023, an F-gain of (1023 / 500) or 2.046 would cause the Talon to output 100% when a speed of 500 is commanded. In that sense, divide 1023 by your measured maximum speed to get your F-gain.\n\n\nStep 3: Tune P, I, and D\n\n\nWrite a test robot which constantly applies tunable P, I, and D coefficients, as well as commanding the motor to go to a specific velocity. For flywheels, this can be set directly through the SmartDashboard; for drivetrains, this can be set by multiplying joystick values by your predetermined maximum velocity.\n\n\nTune your PID coefficients according to the Talon SRX Software Reference Manual. Start with a P-gain of about 0.1 and the I and D values set to zero.\n\n\n\n\nDouble the P-gain until the system oscillates (too much) or until the system responds adequately.\n\n\nIf the mechanism is moving to swiftly, you can add D-gain to smooth the motion. Start with 10x the P-gain.\n\n\nIf the mechanism is not quite reaching the final target position (and P-gain cannot be increased further without hurting overall performance) begin adding I-gain. Start with 1/100\nth\n of the P-gain.\n\n\n\n\nWhen adjusting the I-gain, it is important to also adjust the iZone coefficient which represents the size in milliseconds of the rolling window used to calculate the integral value. Try starting with a iZone value of 1000 (1 second). When increasing the iZone coefficient, the I coefficient should be decreased.\n\n\nTuning Tips and Tricks\n\n\nIf (as in the case of a flywheel) you only care about keeping the mechanism at a certain speed when it is moving, and don't care about how fast it can stop, either prevent the motor from running in reverse (using the \nconfigPeakOutputForward()\n or \nconfigPeakOutputReverse()\n methods of \nChickenTalon\n) or add code to disable PID control when stopping.\n\n\nIf you find the mechanism consuming too much power or having trouble getting up to speed due to brownouts, add a small amount of closed-loop ramping using the \nconfigClosedLoopRamp()\n method. A good value for drivetrains is between 0.1 and 0.3 seconds. (Ramping is measured in seconds for the motor to ramp up from 0% to 100%.)\n\n\nUse the RoboRIO web dashboard to confirm that the PIDF coefficients are being set and that the CANTalon is receiving feedback from the correct encoder. \n\n\n\n\nBug\n\n\nRamp rates are \nnot\n displayed on the web dashboard; there is a field called \"ramp rate\", but setting it has no effect and it will always read 0. (See the CTRE Software Reference Manual, section 6.3.)\n\n\n\n\nCommon Problems\n\n\n\n\n\n\n\n\nProblem\n\n\nSolution\n\n\n\n\n\n\n\n\n\n\nMechanism is oscillating.\n\n\nIncrease the D coefficient. If this worsens the oscillation, reduce the P, I, or D coefficients one at a time to isolate the cause of the oscillation.\n\n\n\n\n\n\nMechanism is too slow to respond to a command.\n\n\nLower the amount of closed loop ramping using the \nconfigClosedLoopRamp()\n method. If that fails (ramping is already at 0), increase the P coefficient.\n\n\n\n\n\n\nMechanism velocity stabilizes at a value far from the goal.\n\n\nAdjust the F coefficient (with the other coefficients set to zero) until the actual speed is as close as possible to the goal.\n\n\n\n\n\n\nWhen P, I, or D is nonzero, the mechanism quickly accelerates to maximum output regardless of commanded velocity.\n\n\nFlip the sensor phase using \nsetSensorPhase()\n.", 
+            "title": "PID Tuning"
+        }, 
+        {
+            "location": "/markdown/fancy-v-pid/#tuning-a-velocity-pid", 
+            "text": "Based on the CTRE Software Reference Manual  This guide uses classes from Team 1540's reusable code library,  ROOSTER ; consult its documentation for more info.", 
+            "title": "Tuning a Velocity PID"
+        }, 
+        {
+            "location": "/markdown/fancy-v-pid/#step-1-determine-maximum-velocity-experimentally", 
+            "text": "Create simple test code to drive the mechanism at a specified throttle and report the velocity (as measured by the encoders native units per 100ms) back to the SmartDashboard/Shuffleboard. For drivetrain tuning, this should be accomplished through joystick control to avoid hitting things, but for mechanisms such as flywheels simply setting the throttle through a tunable value is sufficient.   Note  Throughout the process of tuning the PID controller the motor should be under the same load as it will be used in competitions, i.e. don't try to tune velocity PIDs on a drive train while the robot is off of the ground.", 
+            "title": "Step 1: Determine Maximum Velocity Experimentally"
+        }, 
+        {
+            "location": "/markdown/fancy-v-pid/#example-for-flywheel-control", 
+            "text": "public   class   FlywheelTestRobot   extends   IterativeRobot   { \n   private   ChickenTalon   flywheelMaster   =   new   ChickenTalon ( 0 ); \n   private   ChickenTalon   flywheelSlave   =   new   ChickenTalon ( 1 ); \n   @Tunable ( Throttle ) \n   public   double   throttle   =   0.0 ; \n\n   @Override \n   public   void   robotInit ()   { \n     AdjustableManager . getInstance (). add ( this ); \n\n     flywheelMaster . configSelectedFeedbackSensor ( FeedbackDevice . QuadEncoder ); \n     flywheelSlave . set ( ControlMode . Follower ,   flywheelMaster . getDeviceID ()); \n   } \n\n   @Override \n   public   void   robotPeriodic ()   { \n     Scheduler . getInstance (). run ();   // needed for the AdjustableManager to work \n     SmartDashboard . putNumber ( Velocity ,   flywheelMaster . getSelectedSensorVelocity ()); \n   } \n\n   @Override \n   public   void   teleopPeriodic ()   { \n     flywheelMaster . set ( ControlMode . PercentOutput ,   throttle ); \n   }  }   In this case, simply set the motor output to 100% and monitor the velocity reading. Once it stabilizes, record it; this will be used to calculate F-gain.", 
+            "title": "Example for Flywheel Control"
+        }, 
+        {
+            "location": "/markdown/fancy-v-pid/#example-for-drivetrain-control", 
+            "text": "public   class   DriveTestRobot   extends   IterativeRobot   { \n   private   static   final   int   LEFT_Y_AXIS   =   1 ; \n   private   static   final   int   RIGHT_Y_AXIS   =   5 ; \n\n   private   Joystick   joystick   =   new   Joystick ( 0 ); \n   private   ChickenTalon   lMaster   =   new   ChickenTalon ( 1 ); \n   private   ChickenTalon   lSlave1   =   new   ChickenTalon ( 2 ); \n   private   ChickenTalon   lSlave2   =   new   ChickenTalon ( 3 ); \n   private   ChickenTalon   rMaster   =   new   ChickenTalon ( 4 ); \n   private   ChickenTalon   rSlave1   =   new   ChickenTalon ( 5 ); \n   private   ChickenTalon   rSlave2   =   new   ChickenTalon ( 6 ); \n\n   @Override \n   public   void   robotInit ()   { \n     // setting brake mode, inversions, ramp rates, etc. ommitted for brevity \n     lMaster . configSelectedFeedbackSensor ( FeedbackDevice . QuadEncoder ); \n     lSlave1 . set ( ControlMode . Follower ,   lMaster . getDeviceID ()); \n     lSlave2 . set ( ControlMode . Follower ,   lMaster . getDeviceID ()); \n\n     rMaster . configSelectedFeedbackSensor ( FeedbackDevice . QuadEncoder ); \n     rSlave1 . set ( ControlMode . Follower ,   rMaster . getDeviceID ()); \n     rSlave2 . set ( ControlMode . Follower ,   rMaster . getDeviceID ()); \n   } \n\n   @Override \n   public   void   robotPeriodic ()   { \n     SmartDashboard . putNumber ( Left Velocity ,   lMaster . getSelectedSensorVelocity ()); \n     SmartDashboard . putNumber ( Right Velocity ,   rMaster . getSelectedSensorVelocity ()); \n   } \n\n   @Override \n   public   void   teleopPeriodic ()   { \n     lMaster . set ( ControlMode . PercentOutput ,   joystick . getRawAxis ( LEFT_Y_AXIS )); \n     rMaster . set ( ControlMode . PercentOutput ,   joystick . getRawAxis ( RIGHT_Y_AXS )); \n   }  }   In this case, simply drive the robot up to full speed using joysticks (try not to hit anything) and check the maximum speed attained. (Graphs are highly useful for this.)", 
+            "title": "Example for Drivetrain Control"
+        }, 
+        {
+            "location": "/markdown/fancy-v-pid/#step-2-determine-f-gain", 
+            "text": "Once the maximum output of the mechanism is established, use it to calculate your F-gain. The F-gain determines the base motor output when a specific velocity is commanded and does not use feedback from encoders. Since Talon SRXs represent throttle as a 10-bit signed integer from -1023 to 1023, an F-gain of (1023 / 500) or 2.046 would cause the Talon to output 100% when a speed of 500 is commanded. In that sense, divide 1023 by your measured maximum speed to get your F-gain.", 
+            "title": "Step 2: Determine F-gain"
+        }, 
+        {
+            "location": "/markdown/fancy-v-pid/#step-3-tune-p-i-and-d", 
+            "text": "Write a test robot which constantly applies tunable P, I, and D coefficients, as well as commanding the motor to go to a specific velocity. For flywheels, this can be set directly through the SmartDashboard; for drivetrains, this can be set by multiplying joystick values by your predetermined maximum velocity.  Tune your PID coefficients according to the Talon SRX Software Reference Manual. Start with a P-gain of about 0.1 and the I and D values set to zero.   Double the P-gain until the system oscillates (too much) or until the system responds adequately.  If the mechanism is moving to swiftly, you can add D-gain to smooth the motion. Start with 10x the P-gain.  If the mechanism is not quite reaching the final target position (and P-gain cannot be increased further without hurting overall performance) begin adding I-gain. Start with 1/100 th  of the P-gain.   When adjusting the I-gain, it is important to also adjust the iZone coefficient which represents the size in milliseconds of the rolling window used to calculate the integral value. Try starting with a iZone value of 1000 (1 second). When increasing the iZone coefficient, the I coefficient should be decreased.", 
+            "title": "Step 3: Tune P, I, and D"
+        }, 
+        {
+            "location": "/markdown/fancy-v-pid/#tuning-tips-and-tricks", 
+            "text": "If (as in the case of a flywheel) you only care about keeping the mechanism at a certain speed when it is moving, and don't care about how fast it can stop, either prevent the motor from running in reverse (using the  configPeakOutputForward()  or  configPeakOutputReverse()  methods of  ChickenTalon ) or add code to disable PID control when stopping.  If you find the mechanism consuming too much power or having trouble getting up to speed due to brownouts, add a small amount of closed-loop ramping using the  configClosedLoopRamp()  method. A good value for drivetrains is between 0.1 and 0.3 seconds. (Ramping is measured in seconds for the motor to ramp up from 0% to 100%.)  Use the RoboRIO web dashboard to confirm that the PIDF coefficients are being set and that the CANTalon is receiving feedback from the correct encoder.    Bug  Ramp rates are  not  displayed on the web dashboard; there is a field called \"ramp rate\", but setting it has no effect and it will always read 0. (See the CTRE Software Reference Manual, section 6.3.)", 
+            "title": "Tuning Tips and Tricks"
+        }, 
+        {
+            "location": "/markdown/fancy-v-pid/#common-problems", 
+            "text": "Problem  Solution      Mechanism is oscillating.  Increase the D coefficient. If this worsens the oscillation, reduce the P, I, or D coefficients one at a time to isolate the cause of the oscillation.    Mechanism is too slow to respond to a command.  Lower the amount of closed loop ramping using the  configClosedLoopRamp()  method. If that fails (ramping is already at 0), increase the P coefficient.    Mechanism velocity stabilizes at a value far from the goal.  Adjust the F coefficient (with the other coefficients set to zero) until the actual speed is as close as possible to the goal.    When P, I, or D is nonzero, the mechanism quickly accelerates to maximum output regardless of commanded velocity.  Flip the sensor phase using  setSensorPhase() .", 
+            "title": "Common Problems"
+        }
+    ]
+}
