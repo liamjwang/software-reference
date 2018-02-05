@@ -12,4 +12,5 @@ deploy:
   on:
     branch: master
 notifications:
-  email: false
+  email:
+    on_failure: change
